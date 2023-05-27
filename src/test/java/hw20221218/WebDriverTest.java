@@ -37,7 +37,7 @@ public class WebDriverTest {
         link.click();
 
         String titleText = driver.getTitle();
-        Assert.assertTrue(titleText.contains("Rubber Ducks"));
+        Assert.assertEquals(titleText, "Rubber Ducks");
     }
 
     @Test(dependsOnMethods = "mainPageTest", timeOut = 5000)
